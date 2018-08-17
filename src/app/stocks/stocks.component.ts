@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { Stocks } from '../_models/stocks';
+import { Stock } from '../_models/stock';
 
 @Component({
   selector: 'app-stocks',
@@ -10,7 +10,7 @@ import { Stocks } from '../_models/stocks';
 })
 export class StocksComponent implements OnInit {
   stocksArray: string[] = ['TSLA', 'AAPL'];
-  stocks: Stocks;
+  stocks: Stock[];
 
   constructor(private route: ActivatedRoute) { }
 

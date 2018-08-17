@@ -4,15 +4,15 @@ import { Observable, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
 import { StockService } from '../_services/stock.service';
-import { Stocks } from '../_models/stocks';
+import { Stock } from '../_models/stock';
 
 @Injectable()
-export class StocksResolver implements Resolve<Stocks> {
+export class StocksResolver implements Resolve<Stock[]> {
     stocksArray: string[] = ['TSLA', 'AAPL'];
 
     constructor(private stockService: StockService, private router: Router) {}
 
-    resolve(route: ActivatedRouteSnapshot): Observable<Stocks> {
+    resolve(route: ActivatedRouteSnapshot): Observable<Stock[]> {
         return this.stockService.getStocks(this.stocksArray)
             .pipe(
                 catchError(error => {
