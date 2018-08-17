@@ -1,3 +1,11 @@
-<p>
-  stocks works!
-</p>
+<div class="stocks">
+<div class="no-stocks-message">Welcome to Stox, a stock tracker and viewing tool. To get started add a stock below!</div>
+  <div class="stocks-container">
+        <div class="stock hoverable" *ngFor="let stock of stocks.stocks">
+                <div class="stock-ticker">{{stock.tickerSymbol}}</div>
+                <div class="current-price">{{stock.latestPrice.toFixed(2)}}</div>
+                <div class="open-price">{{stock.openPrice.toFixed(2)}}</div>
+        </div>
+  </div>
+</div>
+<footer class="footer">API by iextrading.com</footer>

@@ -1,0 +1,69 @@
+.no-stocks-message {
+    margin-top: 40px;
+    padding: 0px 20px;
+}
+
+.stocks-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    padding: 5px;
+    background-color: #efefef;
+    text-align: center;
+    font-size: 10px;
+}
+
+
+/* Stock styling */
+
+.stock {
+    width: 300px;
+    height: 200px;
+    border: 3px solid #4885a8;
+    border-radius: 15px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    color: #4885a8;
+    font-family: -apple-system, 'Helvetica Neue', sans-serif;
+}
+
+.hoverable:hover {
+    background-color: #70a4c2;
+    color: white;
+    cursor: pointer;
+}
+
+.stock-ticker {
+    font-size: 36px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.current-price {
+    font-size: 24px;
+}
+
+.open-price {
+    font-size: 18px;
+}
+
+.perc-gain {
+    font-size: 24px;
+}
+
+.positive {
+    color: seagreen;
+}
+
+.negative {
+    color: firebrick
+}
