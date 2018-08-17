@@ -67,3 +67,40 @@
 .negative {
     color: firebrick
 }
+
+
+
+/* Empty Styling */
+
+.empty-stock {
+    position: relative;
+}
+
+.empty-stock::before,
+.empty-stock::after {
+    content: "";
+    display: block;
+    background-color: #4885a8;
+    position: absolute;
+    top: 20px;
+    transform: translate(-50%, -50%);
+}
+
+.empty-stock:before {
+    height:100px;
+    width: 3px;
+    left: 150px;
+    top: 100px;
+}
+
+.empty-stock:after {
+    height: 3px;
+    width: 100px;
+    left: 150px;
+    top: 100px;
+}
+
+.empty-stock:hover:before,
+.empty-stock:hover:after {
+    background-color: white;
+}
