@@ -3,7 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
 import { Stocks } from '../_models/stocks';
-import { StocksComponent } from '../stocks/stocks.component';
 import { Stock } from '../_models/stock';
 
 @Injectable({

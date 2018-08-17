@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { StocksComponent } from './stocks.component';
 import { StocksRoutingModule } from './stocks-routing.module';
 import { StockService } from '../_services/stock.service';
+import { StocksResolver } from '../_resolvers/stocks.resolver';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { StockService } from '../_services/stock.service';
   exports: [
   ],
   providers: [
-    StockService
+    StockService,
+    StocksResolver
   ],
   declarations: [StocksComponent]
 })

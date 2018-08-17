@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
-import { StockService } from '../_services/stock.service';
 import { Stocks } from '../_models/stocks';
 
 @Component({
@@ -12,17 +12,11 @@ export class StocksComponent implements OnInit {
   stocksArray: string[] = ['TSLA', 'AAPL'];
   stocks: Stocks;
 
-  constructor(private stockService: StockService) { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
-    console.log('hello');
-    this.getStocks();
-  }
-
-  getStocks() {
-    this.stockService.getStocks(this.stocksArray)
-    .subscribe(res => {
-      this.stocks = res;
+    this.route.data.subscribe(data => {
+      this.stocks = data['stocks'];
     });
   }
 
