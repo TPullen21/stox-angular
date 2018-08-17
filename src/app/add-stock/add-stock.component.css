@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700');
+
+.add-stock {
+    font-size: 36px;
+    position: relative;
+    font-family: 'Raleway', sans-serif;
+    color: #4885a8;
+    position: relative;
+    width: 80%;
+    max-width: 400px;
+    margin: 150px auto 0;
+}
+
+.add-stock * {
+    box-sizing: border-box;
+}
+
+.add-stock input {
+    border: 0;
+    border-bottom: 2px solid #4885a8;
+    width: 100%;
+    font-size: 30px;
+    line-height: 35px;
+    height: 70px;
+    text-align: center;
+    padding: 10px;
+    background: transparent;
+    color: #4885a8;
+    outline: 0;
+    margin-bottom: 30px;
+}
+
+.add-stock input.shake {
+    animation-name: shaker;
+    animation-duration: 200ms;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+}
+
+.add-stock input::placeholder {
+    color: #94bbd1;
+}
+
+#ticker-input input {
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 10px;
+}
